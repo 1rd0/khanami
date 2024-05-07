@@ -16,7 +16,8 @@ using khanami.Model;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using System.Reflection.Emit;
 using khanami.Interfaces;
- 
+using khanami.Controllers;
+using Microsoft.AspNetCore.Rewrite;
 namespace khanami
 {
     public class Program
@@ -81,6 +82,13 @@ namespace khanami
             });
 
              var app = builder.Build();
+
+            var RedirectPages = new Dictionary<string, string>
+            {
+                {"/adminpage","/userpage"}
+            };
+            app.UseHttpsRedirection();
+ 
             app.UseCors("AllowAnyOrigin");
             app.UseSwagger();
             app.UseRouting();

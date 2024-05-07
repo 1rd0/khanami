@@ -53,7 +53,7 @@ namespace khanami.Controllers
 
 
         [HttpPost]
-        [Authorize(Policy = "RequireStringRole")]
+        //[Authorize(Policy = "RequireStringRole")]
         public async Task<ActionResult<int>> GetItem([FromBody] ItemRequest request) //(int id, string name, string des, decimal price)
         {
             var rand = new Random();
@@ -75,7 +75,7 @@ namespace khanami.Controllers
             return Ok(NewItem.Id);
         }
         [HttpDelete("{id:int}")]
-        [Authorize(Policy = "RequireStringRole")]
+       // [Authorize(Policy = "RequireStringRole")]
         public async Task<ActionResult<int>> DeleteItem(int id)
         {
 
