@@ -12,6 +12,9 @@ namespace khanami.Data
         public  DbSet<Item> Items { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<ItemCategory> Category { get; set; }
+        
+        public DbSet<Carts> Carts { get; set; }
+         
 
         public DBContext(DbContextOptions dbContextOptions):base(dbContextOptions)
         {

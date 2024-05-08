@@ -1,4 +1,6 @@
-﻿namespace khanami.Model
+﻿using khanami.Entities;
+
+namespace khanami.Model
 {
     public class User
     {
@@ -7,6 +9,10 @@
         public string userName { get; set; }
         public string PasswordHashe { get; set; }
         public string Profession { get; set; } = string.Empty;
+
+        
+
+
 
     }
 }
