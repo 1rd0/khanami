@@ -14,7 +14,7 @@ namespace khanami.Data
         public DbSet<ItemCategory> Category { get; set; }
         
         public DbSet<Carts> Carts { get; set; }
-         
+        public DbSet<Orders> Orders { get; set; }
 
         public DBContext(DbContextOptions dbContextOptions):base(dbContextOptions)
         {
