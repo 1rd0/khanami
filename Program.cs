@@ -82,7 +82,7 @@ namespace khanami
             });
 
              var app = builder.Build();
-
+ 
             var RedirectPages = new Dictionary<string, string>
             {
                 {"/adminpage","/userpage"}
